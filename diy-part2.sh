@@ -12,3 +12,6 @@
 
 # Modify default IP
 sed -i 's/192.168.1.1/172.16.22.1/g' package/base-files/files/bin/config_generate
+
+
+sed -i "s/timezone='UTC'/timezone='America/Detroit'/" package/base-files/files/bin/config_generate
