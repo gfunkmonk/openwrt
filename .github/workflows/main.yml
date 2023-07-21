@@ -20,9 +20,8 @@ jobs:
     - name: Generate config file
       run: |
         cd openwrt
-        wget https://downloads.openwrt.org/releases/22.03.3/targets/ramips/mt7621/config.buildinfo
+        wget https://downloads.openwrt.org/releases/22.03.5/targets/ramips/mt7621/config.buildinfo
         cp config.buildinfo .config
-        make oldconfig
     - name: Download package
       run: |
         cd openwrt && make download -j8
