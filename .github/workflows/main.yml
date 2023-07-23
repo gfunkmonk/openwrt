@@ -15,8 +15,8 @@ jobs:
       run: |
         git clone https://github.com/openwrt/openwrt
         cd openwrt
-        cp $GITHUB_WORKSPACE/diy-part1.sh .
-        cp $GITHUB_WORKSPACE/diy-part2.sh .
+        wget -c https://github.com/gfunkmonk/openwrt/raw/main/diy-part1.sh
+        wget -c https://github.com/gfunkmonk/openwrt/raw/main/diy-part2.sh
         chmod +x diy-part1.sh
         chmod +x diy-part2.sh        
         ./diy-part1.sh
@@ -26,7 +26,7 @@ jobs:
     - name: Generate config file
       run: |
         cd openwrt
-        cp $GITHUB_WORKSPACE/.config .config
+        wget -c https://github.com/gfunkmonk/openwrt/raw/main/.config
     - name: Download package
       run: |
         cd openwrt && make download -j8
