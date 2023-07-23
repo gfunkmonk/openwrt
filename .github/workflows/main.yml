@@ -1,1 +1,44 @@
-
+name: Build OpenWrt
+on: 
+  repository_dispatch:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Installation depends
+      run: |
+        sudo apt update -y
+        sudo apt full-upgrade -y
+        sudo apt install -y sudo apt install build-essential clang flex bison g++ gawk gcc-multilib g++-multilib gettext git libncurses-dev libssl-dev python3-distutils rsync unzip zlib1g-dev file wget
+    - name: Clone source code
+      run: |
+        git clone https://github.com/openwrt/openwrt
+        cd openwrt
+        cp $GITHUB_WORKSPACE/diy-part1.sh .
+        cp $GITHUB_WORKSPACE/diy-part2.sh .
+        chmod +x diy-part1.sh
+        chmod +x diy-part2.sh        
+        ./diy-part1.sh
+        ./scripts/feeds update -a
+        ./scripts/feeds install -a
+        ./diy-part2.sh
+    - name: Generate config file
+      run: |
+        cd openwrt
+        cp $GITHUB_WORKSPACE/.config .config
+    - name: Download package
+      run: |
+        cd openwrt && make download -j8
+        find dl -size -1024c -exec ls -l {} \;
+        find dl -size -1024c -exec rm -f {} \;
+    - name: Build
+      run: |
+        cd openwrt
+        make -j$(nproc)
+    - name : Upload artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: OpenWrt
+        path: openwrt/bin
+        
