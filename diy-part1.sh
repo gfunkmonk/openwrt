@@ -22,6 +22,6 @@
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 #echo 'src-git luci-app-temp-status https://github.com/gSpotx2f/luci-app-temp-status.git' >>feeds.conf.default
 #echo 'src-git luci-app-log https://github.com/gSpotx2f/luci-app-log.git' >>feeds.conf.default
-echo 'src-git canmeng12 https://github.com/canmeng12/packages' >>feeds.conf.default
-echo 'src-git luciApp https://github.com/cnbbx/Openwrt-LuciApp' >>feeds.conf.default
-echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
+#echo 'src-git canmeng12 https://github.com/canmeng12/packages' >>feeds.conf.default
+#echo 'src-git luciApp https://github.com/cnbbx/Openwrt-LuciApp' >>feeds.conf.default
+#echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
