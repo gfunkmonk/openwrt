@@ -196,7 +196,7 @@ CONFIG_TARGET_ramips_mt7621=y
 # CONFIG_TARGET_DEVICE_ramips_mt7621_DEVICE_netgear_r6220 is not set yet
 # CONFIG_TARGET_DEVICE_PACKAGES_ramips_mt7621_DEVICE_netgear_r6220 is not set yet
 # CONFIG_TARGET_DEVICE_ramips_mt7621_DEVICE_netgear_r6260=y
-# CONFIG_TARGET_DEVICE_PACKAGES_ramips_mt7621_DEVICE_netgear_r6260="luci-mod-dashboard block-mount kmod-fs-ext4 e2fsprogs fdisk kmod-usb-storage-uas kmod-fs-exfat exfat-mkfs exfat-fsck blkid mount-utils swap-utils nano mc" 
+# CONFIG_TARGET_DEVICE_PACKAGES_ramips_mt7621_DEVICE_netgear_r6260="block-mount kmod-fs-ext4 e2fsprogs fdisk kmod-usb-storage-uas kmod-fs-exfat exfat-mkfs exfat-fsck nano mc" 
 # CONFIG_TARGET_DEVICE_ramips_mt7621_DEVICE_netgear_r6350 is not set yet
 # CONFIG_TARGET_DEVICE_PACKAGES_ramips_mt7621_DEVICE_netgear_r6350 is not set yet
 # CONFIG_TARGET_DEVICE_ramips_mt7621_DEVICE_netgear_r6800 is not set yet
