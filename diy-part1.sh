@@ -25,3 +25,4 @@
 #echo 'src-git canmeng12 https://github.com/canmeng12/packages' >>feeds.conf.default
 #echo 'src-git luciApp https://github.com/cnbbx/Openwrt-LuciApp' >>feeds.conf.default
 #echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
+echo 'src-git https://github.com/gfunkmonk/openwrt-packages' >>feeds.conf.default
