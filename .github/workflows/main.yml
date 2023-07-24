@@ -30,7 +30,8 @@ jobs:
     - name: Generate config file
       run: |
         cd openwrt
-        wget -c https://github.com/gfunkmonk/openwrt/raw/main/.config
+        wget -c https://github.com/gfunkmonk/openwrt/raw/main/buildconfig
+        cp buildconfig .config
     - name: Download package
       run: |
         cd openwrt && make download -j8
